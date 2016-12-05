@@ -1,11 +1,11 @@
 'use strict';
 
-const webpack = require('webpack');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './src/joi-browser.js',
   output: {
-    libary: 'Joi',
+    library: 'Joi',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     path: __dirname + '/dist',
