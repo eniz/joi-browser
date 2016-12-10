@@ -75,13 +75,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// Declare internals
 
 	var internals = {
-	    alternatives: __webpack_require__(29),
-	    array: __webpack_require__(32),
-	    boolean: __webpack_require__(28),
-	    binary: __webpack_require__(33),
+	    alternatives: __webpack_require__(31),
+	    array: __webpack_require__(34),
+	    boolean: __webpack_require__(30),
+	    binary: __webpack_require__(35),
 	    date: __webpack_require__(19),
-	    number: __webpack_require__(27),
-	    object: __webpack_require__(30),
+	    number: __webpack_require__(29),
+	    object: __webpack_require__(32),
 	    string: __webpack_require__(21)
 	};
 
@@ -594,7 +594,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var then = options.then ? this.concat(Cast.schema(options.then)) : this;
 	    var otherwise = options.otherwise ? this.concat(Cast.schema(options.otherwise)) : this;
 
-	    Alternatives = Alternatives || __webpack_require__(29);
+	    Alternatives = Alternatives || __webpack_require__(31);
 	    var obj = Alternatives.when(ref, { is: options.is, then: then, otherwise: otherwise });
 	    obj._flags.presence = 'ignore';
 	    return obj;
@@ -1065,7 +1065,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
+	/* WEBPACK VAR INJECTION */(function(global) {/*!
 	 * The buffer module from node.js, for the browser.
 	 *
 	 * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
@@ -2855,7 +2855,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return val !== val // eslint-disable-line no-self-compare
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 4 */
@@ -4186,7 +4186,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports) {
 
-	
+	/* (ignored) */
 
 /***/ },
 /* 10 */
@@ -5683,8 +5683,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    any: null,
 	    date: __webpack_require__(19),
 	    string: __webpack_require__(21),
-	    number: __webpack_require__(27),
-	    boolean: __webpack_require__(28),
+	    number: __webpack_require__(29),
+	    boolean: __webpack_require__(30),
 	    alt: null,
 	    object: null
 	};
@@ -5692,8 +5692,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.schema = function (config) {
 
 	    internals.any = internals.any || new (__webpack_require__(2))();
-	    internals.alt = internals.alt || __webpack_require__(29);
-	    internals.object = internals.object || __webpack_require__(30);
+	    internals.alt = internals.alt || __webpack_require__(31);
+	    internals.object = internals.object || __webpack_require__(32);
 
 	    if (config && (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object') {
 
@@ -5919,15 +5919,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// Load modules
 
-	var Net = __webpack_require__(9);
+	var Net = __webpack_require__(22);
 	var Hoek = __webpack_require__(7);
-	var Isemail = __webpack_require__(22);
+	var Isemail = __webpack_require__(23);
 	var Any = __webpack_require__(2);
 	var Ref = __webpack_require__(15);
 	var JoiDate = __webpack_require__(19);
 	var Errors = __webpack_require__(16);
-	var Uri = __webpack_require__(24);
-	var Ip = __webpack_require__(26);
+	var Uri = __webpack_require__(26);
+	var Ip = __webpack_require__(28);
 
 	// Declare internals
 
@@ -6381,13 +6381,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 22 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(23);
-
+	/* (ignored) */
 
 /***/ },
 /* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(24);
+
+
+/***/ },
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6438,7 +6444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @version     1.2.0 Drop Node 0.8, fix style, switch to lab/code
 	 */
 
-	var Dns = __webpack_require__(9);
+	var Dns = __webpack_require__(25);
 
 	var internals = {
 	    defaultThreshold: 16,
@@ -7745,12 +7751,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ },
-/* 24 */
+/* 25 */
+/***/ function(module, exports) {
+
+	/* (ignored) */
+
+/***/ },
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var RFC3986 = __webpack_require__(25);
+	var RFC3986 = __webpack_require__(27);
 
 	var internals = {
 	    Uri: {
@@ -7776,7 +7788,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = internals.Uri;
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7957,12 +7969,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = internals.rfc3986;
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var RFC3986 = __webpack_require__(25);
+	var RFC3986 = __webpack_require__(27);
 
 	var internals = {
 	    Ip: {
@@ -7996,7 +8008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = internals.Ip;
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8171,7 +8183,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = new internals.Number();
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8213,7 +8225,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = new internals.Boolean();
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8366,7 +8378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = new internals.Alternatives();
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8376,7 +8388,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// Load modules
 
 	var Hoek = __webpack_require__(7);
-	var Topo = __webpack_require__(31);
+	var Topo = __webpack_require__(33);
 	var Any = __webpack_require__(2);
 	var Cast = __webpack_require__(18);
 	var Errors = __webpack_require__(16);
@@ -9064,7 +9076,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = new internals.Object();
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9296,7 +9308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9789,7 +9801,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = new internals.Array();
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
